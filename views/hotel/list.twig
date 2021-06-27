@@ -1,0 +1,46 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<div class="main-content">
+<form action="#" method="post" enctype="multipart/form-data">
+    <div>
+         <a href="/hotels/add" class="btn btn-primary addButton">Ajouter</a>
+    </div>
+</form>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Etoiles</th>
+            <th>Adresse</th>
+            <th>Ville</th>
+            <th>Prix T1</th>
+            <th>Prix T2</th>
+            <th>Prix T3</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if hotels == null %}
+            <td style="text-align: center;" colspan="9">Aucune donnée à afficher</td>
+        {% else %}
+        {% for item in hotels %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.rate }}</td>
+                <td>{{ item.address }}</td>
+                <td>{{ item.priceR1 }}</td>
+                <td>{{ item.priceR2 }}</td>
+                <td>{{ item.priceR3 }}</td>
+                <td>
+                    <a href="#" class="btn btn-danger">Supprimer</a>
+                    <a href="hotels/update" class="btn btn-warning">Modifier</a>
+                </td>
+            </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

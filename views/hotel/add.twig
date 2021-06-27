@@ -1,0 +1,33 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<div class="main-content">
+    <div class="form-group">
+        <label>Nom :</label>
+        <input type="text" class="form-control">
+        <label>Etoiles :</label>
+        <input type="number" class="form-control">
+        <label>Adresse :</label>
+        <input type="text" class="form-control">
+        <label>Ville :</label>
+        <input type="text" class="form-control">
+        <label>Prix T1 :</label>
+        <input type="number" class="form-control">
+        <label>Prix T2 :</label>
+        <input type="number" class="form-control">
+        <label>Prix T3 :</label>
+        <input type="number" class="form-control">
+    </div>
+
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <input type="submit" name="" value="Enregistrer" class="btn btn-primary" style="width:48%" >
+            <input type="reset" name="" value="Réinitialiser" class="btn btn-danger"  style="width:48%;margin-left:4%">
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock %}
